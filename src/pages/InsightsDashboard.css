@@ -1,0 +1,321 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* ── Top bar ────────────────────────────────────────────────────── */
+.dashboard__topbar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 32px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-top-nav);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dashboard__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.dashboard__brand-logo {
+  width: 32px;
+  height: 32px;
+  background: var(--primary-11);
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.dashboard__brand-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-h);
+  display: block;
+  line-height: 1.1;
+}
+
+.dashboard__brand-module {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: block;
+  font-weight: 400;
+}
+
+.dashboard__tenant-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dashboard__tenant-label {
+  font-size: 14px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.dashboard__tenant-select {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-h);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.dashboard__tenant-select:focus {
+  border-color: var(--primary-32);
+  box-shadow: 0px 0px 0px 2px var(--secondary-90);
+}
+
+/* Role badge — replicates lyfe-ui StatusTag in "grey" variant */
+.dashboard__role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 2px 10px 2px 8px;
+  border-radius: 16px;
+  white-space: nowrap;
+  height: 24px;
+}
+
+.dashboard__role-badge::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dashboard__role-badge--pharma {
+  background: var(--primary-94);
+  color: var(--primary-11);
+}
+
+.dashboard__role-badge--pharma::before {
+  background: var(--primary-32);
+}
+
+.dashboard__role-badge--payer {
+  background: var(--tertiary-96);
+  color: var(--tertiary-30);
+}
+
+.dashboard__role-badge--payer::before {
+  background: var(--tertiary-72);
+}
+
+.dashboard__meta {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+}
+
+.dashboard__as-of {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.dashboard__refresh-note {
+  font-size: 12px;
+  color: var(--gray-65);
+}
+
+/* ── Page header ────────────────────────────────────────────────── */
+.dashboard__page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px 32px 20px;
+}
+
+.dashboard__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 0 0 4px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.dashboard__subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Warning/disclaimer — matches lyfe-ui SystemMessage warning inline */
+.dashboard__disclaimer {
+  font-size: 14px;
+  color: var(--warning-11);
+  background: var(--warning-greyish);
+  border: 1px solid var(--warning-main);
+  border-radius: 8px;
+  padding: 8px 14px;
+  max-width: 340px;
+  line-height: 1.4;
+}
+
+/* ── Section ────────────────────────────────────────────────────── */
+.dashboard__section {
+  padding: 0 32px 32px;
+}
+
+/* ── Tabs ───────────────────────────────────────────────────────── */
+.dashboard__tabs {
+  display: flex;
+  padding: 0 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+}
+
+.dashboard__tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+  line-height: 1.22;
+  letter-spacing: 0.16px;
+}
+
+.dashboard__tab:hover {
+  color: var(--primary-21);
+}
+
+.dashboard__tab--active {
+  color: var(--primary-11);
+  border-bottom-color: var(--primary-11);
+}
+
+/* ── Filters ────────────────────────────────────────────────────── */
+.dashboard__filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard__filters-label {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-right: 4px;
+}
+
+/* Filter buttons replicate lyfe-ui outlined button */
+.dashboard__filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  line-height: 1.26;
+  letter-spacing: 0.14px;
+}
+
+.dashboard__filter-btn:hover {
+  border-color: var(--primary-32);
+  color: var(--primary-11);
+  background: var(--primary-95);
+}
+
+.dashboard__filter-btn--active {
+  background: var(--primary-11);
+  color: #fff;
+  border-color: var(--primary-11);
+}
+
+.dashboard__filter-btn--on_track.dashboard__filter-btn--active {
+  background: var(--primary-21);
+  border-color: var(--primary-21);
+}
+
+.dashboard__filter-btn--at_risk.dashboard__filter-btn--active {
+  background: var(--warning-30);
+  border-color: var(--warning-30);
+  color: #fff;
+}
+
+.dashboard__filter-btn--underperforming.dashboard__filter-btn--active {
+  background: var(--error-20);
+  border-color: var(--error-20);
+}
+
+.dashboard__filter-count {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dashboard__filter-btn:not(.dashboard__filter-btn--active) .dashboard__filter-count {
+  background: var(--gray-93);
+  color: var(--text-muted);
+}
+
+/* ── Cards grid ─────────────────────────────────────────────────── */
+.dashboard__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 960px) {
+  .dashboard__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard__empty {
+  color: var(--text-muted);
+  font-size: 16px;
+  padding: 48px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .dashboard__topbar,
+  .dashboard__page-header,
+  .dashboard__section,
+  .dashboard__tabs {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

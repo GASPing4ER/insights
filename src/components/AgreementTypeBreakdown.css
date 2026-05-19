@@ -1,0 +1,129 @@
+.atb {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-dropdown);
+}
+
+.atb__title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-h);
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.atb__sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+.atb__stacked-bar {
+  display: flex;
+  height: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.atb__bar-segment {
+  border-radius: 2px;
+  transition: opacity 0.15s;
+}
+.atb__bar-segment:hover { opacity: 0.75; }
+
+.atb__legend {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.atb__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.atb__legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Table — matches lyfe-ui Table styling */
+.atb__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: left;
+}
+
+.atb__table th {
+  font-size: 14px;
+  color: var(--gray-27);
+  font-weight: 500;
+  padding: 12px 24px 12px 10px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.atb__table td {
+  padding: 0 24px 0 10px;
+  height: 48px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.atb__table tbody tr:nth-child(even) td { background: var(--gray-99); }
+.atb__table tbody tr:nth-child(odd) td  { background: var(--surface); }
+.atb__table tbody tr:hover td           { background: var(--primary-90); }
+
+.atb__table tbody tr:last-child td { border-bottom: none; }
+
+.atb__table tfoot td {
+  border-top: 1px solid var(--border);
+  color: var(--text-h);
+  font-weight: 600;
+  padding: 12px 24px 12px 10px;
+  background: var(--gray-98);
+}
+
+.atb__type-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.atb__share-bar {
+  display: inline-block;
+  width: 80px;
+  height: 6px;
+  background: var(--gray-93);
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-right: 8px;
+  overflow: hidden;
+}
+
+.atb__share-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.atb__share-pct {
+  font-size: 13px;
+  color: var(--text-muted);
+  vertical-align: middle;
+}

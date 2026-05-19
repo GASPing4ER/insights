@@ -1,0 +1,168 @@
+.rit {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-dropdown);
+}
+
+.rit__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.rit__title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-h);
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.rit__sub {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Indicative label — lyfe-ui grey StatusTag style */
+.rit__indicative {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 1px 8px 1px 6px;
+  border-radius: 16px;
+  height: 20px;
+  background: transparent;
+  border: 1px solid var(--gray-93);
+  color: var(--gray-27);
+  white-space: nowrap;
+}
+
+.rit__indicative::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gray-65);
+  flex-shrink: 0;
+}
+
+.rit__table-wrap {
+  overflow-x: auto;
+}
+
+/* Table — matches lyfe-ui Table */
+.rit__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: left;
+  min-width: 720px;
+}
+
+.rit__table th {
+  font-size: 14px;
+  color: var(--gray-27);
+  font-weight: 500;
+  padding: 12px 16px 12px 10px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.rit__table td {
+  padding: 0 16px 0 10px;
+  height: 48px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.rit__table tbody tr:nth-child(even) td { background: var(--gray-99); }
+.rit__table tbody tr:nth-child(odd) td  { background: var(--surface); }
+.rit__table tbody tr:hover td           { background: var(--primary-90); }
+.rit__table tbody tr:last-child td      { border-bottom: none; }
+
+.rit__td-agreement {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.rit__td-value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.rit__td-expected {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Type tags — lyfe-ui StatusTag small, no dot */
+.rit__type-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 1px 8px 1px 6px;
+  border-radius: 16px;
+  height: 20px;
+  white-space: nowrap;
+  mix-blend-mode: multiply;
+}
+
+.rit__type-tag::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.rit__type-tag--volume        { background: var(--primary-94);      color: var(--primary-11); }
+.rit__type-tag--volume::before { background: var(--primary-32); }
+
+.rit__type-tag--tiered        { background: var(--secondary-96);    color: var(--secondary-16); }
+.rit__type-tag--tiered::before { background: var(--secondary-53); }
+
+.rit__type-tag--market_share  { background: var(--tertiary-greyish); color: var(--tertiary-30); }
+.rit__type-tag--market_share::before { background: var(--tertiary-72); }
+
+.rit__type-tag--outcomes_based { background: var(--yellow-96);       color: #383100; }
+.rit__type-tag--outcomes_based::before { background: #FFE31F; }
+
+.rit__type-tag--flat_fee      { background: var(--gray-96);         color: var(--gray-27); }
+.rit__type-tag--flat_fee::before { background: var(--gray-65); }
+
+/* Variance — lyfe-ui primary/error StatusTag small */
+.rit__variance {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 1px 8px;
+  border-radius: 16px;
+  height: 20px;
+}
+
+.rit__variance--positive {
+  background: var(--primary-94);
+  color: var(--primary-11);
+}
+
+.rit__variance--negative {
+  background: var(--error-greyish);
+  color: var(--error-11);
+}

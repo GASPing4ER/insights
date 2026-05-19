@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Light.woff2') format('woff2');
+  font-weight: 275;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ── Lyfegen palette tokens ─────────────────────────────────────── */
+:root {
+  /* Gray scale */
+  --gray-99: #FCFCFD;
+  --gray-98: #F9FAFB;
+  --gray-96: #F2F4F7;
+  --gray-93: #EAECF0;
+  --gray-84: #D0D5DD;
+  --gray-65: #98A2B3;
+  --gray-46: #667085;
+  --gray-34: #475467;
+  --gray-27: #344054;
+  --gray-17: #1D2939;
+  --gray-11: #101828;
+
+  /* Primary (teal) */
+  --primary-95: #EDF7F7;
+  --primary-94: #E3FBFC;
+  --primary-90: #DCEFEF;
+  --primary-89: #D9EDED;
+  --primary-32: #009AA3;
+  --primary-26: #007D85;
+  --primary-21: #00656B;
+  --primary-16: #004D52;
+  --primary-11: #003538;
+
+  /* Secondary (green) */
+  --secondary-96: #EEFCF9;
+  --secondary-90: #D4F7F1;
+  --secondary-53: #34DABE;
+  --secondary-43: #22BAA0;
+  --secondary-24: #136759;
+  --secondary-16: #0D453B;
+  --secondary-main: #18816F;
+
+  /* Tertiary (violet/blue) */
+  --tertiary-96: #EBEBFF;
+  --tertiary-greyish: #EFEFFB;
+  --tertiary-80: #9D99FF;
+  --tertiary-72: #7670FF;
+  --tertiary-40: #0800CC;
+  --tertiary-30: #060099;
+  --tertiary-main: #4038FF;
+
+  /* Warning */
+  --warning-greyish: #FAF6F0;
+  --warning-96: #FFF7EB;
+  --warning-80: #FFD899;
+  --warning-30: #995E00;
+  --warning-11: #523300;
+  --warning-main: #FFB133;
+
+  /* Error */
+  --error-greyish: #FAF0F3;
+  --error-96: #FFEBF1;
+  --error-82: #FFA3BF;
+  --error-60: #FF3370;
+  --error-40: #CC003D;
+  --error-20: #66001F;
+  --error-11: #380011;
+
+  /* Yellow */
+  --yellow-96: #FFFCEB;
+  --yellow-56: #FFE31F;
+  --yellow-greyish: #FAF9F0;
+
+  /* Shadows */
+  --shadow-dropdown: 0px 4px 12px 0px rgba(52, 64, 84, 0.08);
+  --shadow-top-nav: 0px 4px 16px 0px rgba(0, 53, 56, 0.06);
+  --shadow-modal: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+
+  /* Semantic aliases used across components */
+  --bg: var(--gray-98);
+  --surface: #ffffff;
+  --surface-alt: var(--gray-96);
+  --border: var(--gray-93);
+  --text-h: var(--gray-11);
+  --text: var(--gray-27);
+  --text-muted: var(--gray-46);
+  --accent: var(--primary-11);
+  --accent-mid: var(--primary-32);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Satoshi', sans-serif;
+  font-size: 16px;
+  line-height: 1.48;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: 'Satoshi', sans-serif;
+  color: var(--text-h);
+}
+
+p {
+  margin: 0;
+}
+
+button, select, input {
+  font-family: 'Satoshi', sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
